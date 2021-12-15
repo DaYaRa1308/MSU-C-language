@@ -31,14 +31,12 @@ void SigSonHandler(int sig)
     else if (sig == SIGUSR2)
     {
         flag_read = 1;
-        signal(SIGUSR2,SigSonHandler);
         return;
     }
     else if (sig == SIGTERM)
     {
         close(fd[1]);
         close(fd[0]);
-        signal(SIGTERM,SigSonHandler);
         exit(0);
     }
 }
