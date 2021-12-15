@@ -343,6 +343,8 @@ void run_commands(char * line,int argc)
                     //fprintf(stderr,"asdasdsadsa\n");
                     if((path_3 = get_current_directory()) == NULL)
                     {
+                        line -= seek;
+                        free_input_line(line);
                         free_list(arr);
                         exit(FAULT_EXIT);
                     }
