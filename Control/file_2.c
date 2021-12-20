@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define LEN 1024
 
-char * devider_file(char *,char *,char *);
+char * devider_file_toker(char *,char *,char *);
 int down_str(int,char *);
 
 int main(int argc, char ** argv)
@@ -21,7 +21,7 @@ int main(int argc, char ** argv)
 	return 0;
 }
 
-char * devider_file(char * file_name, char * file_ans, char * delim)
+char * devider_file_toker(char * file_name, char * file_ans, char * delim)
 {
 	int c = 100;
 	FILE * fp;
